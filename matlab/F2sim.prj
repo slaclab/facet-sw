@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="2274643168" file="/media/psf/Home/OneDrive - SLAC National Accelerator Laboratory/Work/FACET2/apps/F2sim.prj" location="/media/psf/Home/OneDrive - SLAC National Accelerator Laboratory/Work/FACET2/apps" name="F2sim" preferred-package-location="/media/psf/Home/OneDrive - SLAC National Accelerator Laboratory/Work/FACET2/apps/run_F2sim/for_redistribution" preferred-package-type="package.type.install" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="2274643168" file="/media/psf/Home/OneDrive - SLAC National Accelerator Laboratory/Work/facet-sw/matlab/F2sim.prj" location="/media/psf/Home/OneDrive - SLAC National Accelerator Laboratory/Work/facet-sw/matlab" name="F2sim" preferred-package-location="/media/psf/Home/OneDrive - SLAC National Accelerator Laboratory/Work/FACET2/apps/run_F2sim/for_redistribution" preferred-package-type="package.type.install" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>F2sim</param.appname>
     <param.icon />
     <param.icons />
@@ -96,30 +96,30 @@ ${LD_LIBRARY_PATH}:MR/v98/runtime/glnxa64:MR/v98/bin/glnxa64:MR/v98/sys/os/glnxa
     <fileset.resources />
     <fileset.package />
     <fileset.depfun>
-      <file>/media/psf/Home/Lucretia/src/labca/lcaGet.m</file>
-      <file>/media/psf/Home/Lucretia/src/labca/lcaGet.mexa64</file>
-      <file>/media/psf/Home/Lucretia/src/labca/lcaLastError.m</file>
-      <file>/media/psf/Home/Lucretia/src/labca/lcaLastError.mexa64</file>
-      <file>/media/psf/Home/Lucretia/src/labca/lcaNewMonitorValue.m</file>
-      <file>/media/psf/Home/Lucretia/src/labca/lcaNewMonitorValue.mexa64</file>
-      <file>/media/psf/Home/Lucretia/src/labca/lcaPut.m</file>
-      <file>/media/psf/Home/Lucretia/src/labca/lcaPut.mexa64</file>
-      <file>/media/psf/Home/Lucretia/src/labca/lcaPutNoWait.m</file>
-      <file>/media/psf/Home/Lucretia/src/labca/lcaPutNoWait.mexa64</file>
-      <file>/media/psf/Home/Lucretia/src/labca/lcaSetMonitor.m</file>
-      <file>/media/psf/Home/Lucretia/src/labca/lcaSetMonitor.mexa64</file>
-      <file>/media/psf/Home/Lucretia/src/labca/lcaSetSeverityWarnLevel.m</file>
-      <file>/media/psf/Home/Lucretia/src/labca/lcaSetSeverityWarnLevel.mexa64</file>
       <file>${PROJECT_ROOT}/F2_CathodeServicesSim.m</file>
       <file>${PROJECT_ROOT}/GUI_PREFS.m</file>
       <file>${PROJECT_ROOT}/PV.m</file>
       <file>${PROJECT_ROOT}/PVtype.m</file>
+      <file>/usr/local/Lucretia/src/labca/lcaGet.m</file>
+      <file>/usr/local/Lucretia/src/labca/lcaGet.mexa64</file>
+      <file>/usr/local/Lucretia/src/labca/lcaLastError.m</file>
+      <file>/usr/local/Lucretia/src/labca/lcaLastError.mexa64</file>
+      <file>/usr/local/Lucretia/src/labca/lcaNewMonitorValue.m</file>
+      <file>/usr/local/Lucretia/src/labca/lcaNewMonitorValue.mexa64</file>
+      <file>/usr/local/Lucretia/src/labca/lcaPut.m</file>
+      <file>/usr/local/Lucretia/src/labca/lcaPut.mexa64</file>
+      <file>/usr/local/Lucretia/src/labca/lcaPutNoWait.m</file>
+      <file>/usr/local/Lucretia/src/labca/lcaPutNoWait.mexa64</file>
+      <file>/usr/local/Lucretia/src/labca/lcaSetMonitor.m</file>
+      <file>/usr/local/Lucretia/src/labca/lcaSetMonitor.mexa64</file>
+      <file>/usr/local/Lucretia/src/labca/lcaSetSeverityWarnLevel.m</file>
+      <file>/usr/local/Lucretia/src/labca/lcaSetSeverityWarnLevel.mexa64</file>
     </fileset.depfun>
     <build-deliverables>
-      <file location="${PROJECT_ROOT}/F2sim/for_testing" name="run_F2sim.sh" optional="false">/media/psf/Home/OneDrive - SLAC National Accelerator Laboratory/Work/FACET2/apps/F2sim/for_testing/run_F2sim.sh</file>
-      <file location="${PROJECT_ROOT}/F2sim/for_testing" name="readme.txt" optional="true">/media/psf/Home/OneDrive - SLAC National Accelerator Laboratory/Work/FACET2/apps/F2sim/for_testing/readme.txt</file>
-      <file location="${PROJECT_ROOT}/F2sim/for_testing" name="splash.png" optional="false">/media/psf/Home/OneDrive - SLAC National Accelerator Laboratory/Work/FACET2/apps/F2sim/for_testing/splash.png</file>
-      <file location="${PROJECT_ROOT}/F2sim/for_testing" name="F2sim" optional="false">/media/psf/Home/OneDrive - SLAC National Accelerator Laboratory/Work/FACET2/apps/F2sim/for_testing/F2sim</file>
+      <file location="${PROJECT_ROOT}/F2sim/for_testing" name="splash.png" optional="false">/media/psf/Home/OneDrive - SLAC National Accelerator Laboratory/Work/facet-sw/matlab/F2sim/for_testing/splash.png</file>
+      <file location="${PROJECT_ROOT}/F2sim/for_testing" name="F2sim" optional="false">/media/psf/Home/OneDrive - SLAC National Accelerator Laboratory/Work/facet-sw/matlab/F2sim/for_testing/F2sim</file>
+      <file location="${PROJECT_ROOT}/F2sim/for_testing" name="run_F2sim.sh" optional="false">/media/psf/Home/OneDrive - SLAC National Accelerator Laboratory/Work/facet-sw/matlab/F2sim/for_testing/run_F2sim.sh</file>
+      <file location="${PROJECT_ROOT}/F2sim/for_testing" name="readme.txt" optional="true">/media/psf/Home/OneDrive - SLAC National Accelerator Laboratory/Work/facet-sw/matlab/F2sim/for_testing/readme.txt</file>
     </build-deliverables>
     <workflow />
     <matlab>
