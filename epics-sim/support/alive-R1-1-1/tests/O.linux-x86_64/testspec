@@ -1,0 +1,4 @@
+OS-class: Linux
+Target-arch: linux-x86_64
+Tests: aliveTest.t
+Files: ../O.Common/aliveTest.db ../aliveTest.db

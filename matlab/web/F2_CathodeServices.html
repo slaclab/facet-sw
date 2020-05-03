@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>F2_CathodeServices</title>
+  </head>
+  <body>
+    <h1>FACET-II Gun: Cathode Services<br>
+    </h1>
+    <h2>Author</h2>
+    <p>G. White, SLAC.<br>
+      email: whitegr -AT- slac.stanford.edu <br>
+    </p>
+    <p><b>Release Status: <font color="#ff0000">*ALPHA* V0.1</font>
+        (procedures, software and target values under development)<br>
+      </b></p>
+    <p><a href="#HardwareRequirements">Hardware Requirements</a> | <a
+        href="#ControlsOverview"> Controls, Procedures &amp; Software
+        Overview</a> | <a href="#CodeSource">Source Code</a> | <a
+        href="#GUI">GUI</a> | <a href="#FunctionalInterface">Functional
+        Interface</a> <br>
+    </p>
+    <h2><a name="HardwareRequirements"></a>Hardware Requirements</h2>
+    <p><a href="uv_tables.key">Laser power &amp; spot size calculations
+        based on ATF experience from Brendan (keynote).</a><br>
+    </p>
+    <p>Hardware requirements and notes on current availability for
+      software and procedures listed on this page:<br>
+    </p>
+    <ul>
+      <li><b>Cathode image camera &amp; imaging screens </b><font
+          color="#33cc00"><b>OK</b></font></li>
+      <ul>
+        <li>Image acquisition via EPICS PV with Static frame grab &amp;
+          streaming capability</li>
+        <ul>
+          <li>Cathode reflection camera (PM10241)<br>
+          </li>
+          <ul>
+            <li>Image acquisition: CTHD:IN10:111:Acquisition etc...</li>
+            <li>software needs some debugging (known issue)<br>
+            </li>
+          </ul>
+          <li>Cathode profile monitor</li>
+          <ul>
+            <li>PROF:IN10:241:Acquisition etc...<br>
+            </li>
+          </ul>
+          <li>VCC</li>
+          <ul>
+            <li>CAMR:LT10:900:Acquisition etc...</li>
+          </ul>
+        </ul>
+        <li>VCC Imaging screen x/y motion control via EPICS PV</li>
+        <ul>
+          <li>VCTD:LT10:900:VCC_POS_X</li>
+          <li>VCTD:LT10:900:VCC_POS_Y</li>
+        </ul>
+        <li>Illumination control</li>
+        <ul>
+          <li>Target: CTHD:IN10:111:TGT_LMP_PWR</li>
+          <li>Grid CTHD:IN10:111:GRID_LMP_PWR</li>
+          <li>Also, as above for device: 241<br>
+          </li>
+        </ul>
+      </ul>
+      <li><b>uv Source laser&nbsp;</b><b><font color="#33cc00"><b>OK</b></font></b></li>
+      <ul>
+        <li>Shutter readback and control EPICS PV controls, redundant
+          controls<br>
+        </li>
+        <ul>
+          <li>MPS laser shutter: IOC:SYS1:MP01:MSHUTCTL</li>
+          <li>MPS shutter has hardware interlock logic - activates BCS
+            shutters on fail</li>
+          <li>Consider use additional laser table EPICS controllable
+            device as alternative "failsafe" shutter system (for V.2)<br>
+          </li>
+        </ul>
+        <li>Laser energy readback via EPICS PV</li>
+        <ul>
+          <li>LASR:LT10:930:PWR1H</li>
+        </ul>
+        <li>x/y motion control to steer spot on cathode</li>
+        <ul>
+          <li>MIRR:LT10:770:M2_MOTR_H</li>
+          <li>MIRR:LT10:770:M2_MOTR_V</li>
+        </ul>
+      </ul>
+      <li><b>Electron beam charge measurement </b><font color="#cc0000"><b>WORK
+            NEEDED</b></font></li>
+      <ul>
+        <li>Faraday cup for low charge (&lt;500pC) measurements</li>
+        <ul>
+          <li>Insertion controls - EPICS PV</li>
+          <ul>
+            <li>FARC:IN10:241:PNEUMATIC<br>
+            </li>
+          </ul>
+          <li>Readback via EPICS PV</li>
+          <ul>
+            <li>Faraday cup readout only via scope currently, need work
+              to calibrate and generate EPICS PV</li>
+          </ul>
+          <li>Faraday cup in general needs to be made to work<br>
+          </li>
+        </ul>
+        <li>BPMs for higher chage measurements</li>
+        <ul>
+          <li>BPMS: 221,371,425,511,525,581,631,661<br>
+          </li>
+        </ul>
+      </ul>
+      <li><b>Gun vacuum measurement, readback by EPICS PV</b> <font
+          color="#33cc00"><b>OK</b></font></li>
+      <ul>
+        <li>Two cold cathode gauges available in gun &amp; waveguide</li>
+        <ul>
+          <li>VGCC:IN10:W285</li>
+          <li>VGCC:IN10:133<br>
+          </li>
+        </ul>
+      </ul>
+      <li><b>Watchdog </b><font color="#cc0000"><b>WORK NEEDED</b></font></li>
+      <ul>
+        <li>Hardware crate with I/O and EPICS IOC, OR just use soft-IOC
+          with EPICS PV inputs<br>
+        </li>
+        <li>Start with SOFT-IOC and upgrade to hardware system later</li>
+        <ul>
+          <li>Prototype IOC written, needs implementing and testing<br>
+          </li>
+        </ul>
+      </ul>
+      <li><b>Gun Vacuum RGA</b> <font color="#cc0000"><b>WORK NEEDED</b></font><br>
+      </li>
+      <ul>
+        <li>Get existing Windows-based s/w working for use in initial
+          commissioning<br>
+        </li>
+        <li>Write EPICS device driver to provide access to automated
+          scanning software (for V.2)<br>
+        </li>
+      </ul>
+    </ul>
+    <h2><a name="ControlsOverview"></a>Controls, Procedures and Software
+      Overview</h2>
+    <ul>
+      <li><a href="CathodeCleaningProcedure.pdf">Text document
+          summarizing these procedures</a><br>
+      </li>
+      <li>UML diagrams for general controls layout, laser cleaning
+        procedure and software shown in 3 tabs below (hover mouse over
+        window to see controls):</li>
+    </ul>
+    <br>
+    <iframe src="CathodeServices.html" width="1400" height="900"> </iframe>
+    <h2><a name="CodeSource"></a>GUI Code Source</h2>
+    <ul>
+      <li><a href="F2_CathodeServices.mlapp">Matlab app</a></li>
+    </ul>
+    <h2><a name="GUI"></a>GUI</h2>
+    <h3>Laser Cleaning (select laser cleaning tab)<br>
+    </h3>
+    <img src="F2_CathodeServices_LaserCleaning.png" alt="" width="1481"
+      height="738"><br>
+    <br>
+    Laser cleaning procedure (see UML chart above for full procedure)<br>
+    <ul>
+      <li>Follow procedure from top to bottom in Laser Cleaning tab,
+        check boxes to indicate tasks complete</li>
+      <li>Use VCC image of cathode or saved QE map to select circular
+        cleaning area using "Define cleaning area" button - follow
+        directions in pop-up window</li>
+      <ul>
+        <li>Using imaging and laser motion control to verify central
+          position, use GUI interface to defined cleaning area around
+          cetral location</li>
+        <li>GUI generates pictorial representation of cleaning spots
+          which also serves as progress indicator<br>
+        </li>
+      </ul>
+      <li>Check selected cleaning radius, set @ pulses per cleaning
+        spot, laser spot size and cleaning step size</li>
+      <ul>
+        <li>Estimated time to complete cleaning procedure is indicated
+          at top right of Laser Cleaning tab for these settings</li>
+      </ul>
+      <li>Start automated cleaning procedure with appropriate button
+        push</li>
+      <ul>
+        <li>Can stop procedure at any time with "STOP" button</li>
+        <li>After stopping, can be resumed by re-pressing this button</li>
+        <li>If vacuum or laser energy conditions deviate from selected
+          ranges, stop button is automatically pushed</li>
+        <li>If EPICS watchdog program detects excursions in these
+          parameters or fails, STOP condition is also enabled</li>
+        <li>See Cleaning status window for details of why procedure was
+          stopped in addition to a warning window which pops up<br>
+        </li>
+      </ul>
+    </ul>
+    <h3>QE Map Generation (QE map tab)</h3>
+    <img src="F2_CathodeServices_QEmap.png" alt="" width="348"
+      height="173">
+    <h3> </h3>
+    <h3> </h3>
+    <h3><b><a name="FunctionalInterface"></a>Functional interface:<br>
+      </b></h3>
+    <p>After installing the Matlab app above, the functional interface
+      for the fitting algorithm can be used from a Matlab command
+      window:<br>
+    </p>
+    <pre>&gt;&gt; <br></pre>
+    <br>
+    <p><br>
+    </p>
+  </body>
+</html>
