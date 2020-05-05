@@ -84,7 +84,7 @@ classdef F2_CathodeServicesApp < handle
     camNames=["CAMR:LT10:900" "CTHD:IN10:111"]; % VCC,REF camera names
     version=1.0; % software version
     configprops=["CleaningCenter" "CleaningRadius" "CleaningNumPulsesPerStep" "CleaningStepSize" "CleaningStartPosition" "VCC_mirrcal" "ImageIntensityRange" "LaserSpotSizeRange" ...
-      "LaserFluenceRange" "GunVacuumRange" "LaserEnergyRange" "version" "LaserPosition_tol" "MotorVeloHome"]; % Properties to save/restore to/from configuration files
+      "LaserFluenceRange" "GunVacuumRange" "LaserEnergyRange" "version" "LaserPosition_tol" "MotorVeloHome" "buflen"]; % Properties to save/restore to/from configuration files
   end
   
   methods
