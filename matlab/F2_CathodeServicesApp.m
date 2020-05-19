@@ -88,14 +88,12 @@ classdef F2_CathodeServicesApp < handle
   end
   
   methods
-    function obj=F2_CathodeServicesApp(debuglevel)
+    function obj=F2_CathodeServicesApp(debuglevel,guihan)
       % CS = F2_CathodeServices(debuglevel)
       if ~exist('debuglevel','var')
         error('Must provide debug level');
       end
       
-      % Launch GUI if not providing simulation services
-      guihan = F2_CathodeServices(obj) ;
       drawnow;
       % labca setup and formation of PV list
       lcaSetSeverityWarnLevel(14) ;
