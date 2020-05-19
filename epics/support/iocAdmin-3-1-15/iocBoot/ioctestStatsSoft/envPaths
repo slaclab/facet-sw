@@ -1,2 +1,0 @@
-epicsEnvSet("IOC","ioctestStatsSoft")
-epicsEnvSet("TOP","/usr/local/epics/support/iocAdmin-3-1-15")

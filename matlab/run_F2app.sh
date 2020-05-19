@@ -10,6 +10,6 @@ LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:.:${MCRROOT}/runtime/glnxa64 ;
 LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${MCRROOT}/bin/glnxa64 ;
 LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${MCRROOT}/sys/os/glnxa64;
 LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${MCRROOT}/sys/opengl/lib/glnxa64;
-LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:~/whitegr/Lucretia/src/Libs/mexa64/
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lcls/epics/extensions/labca/R3.7.2/lib/rhel6-x86_64/
 export LD_LIBRARY_PATH;
-eval "${APPDIR}/${APPNAME}"
+eval "${APPNAME}/${APPNAME}"

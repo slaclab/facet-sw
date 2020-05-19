@@ -1,4 +1,0 @@
-epicsEnvSet("IOC","iocaliveEx")
-epicsEnvSet("TOP","/usr/local/epics/support/alive-R1-1-1")
-epicsEnvSet("SUPPORT","/usr/local/epics/support")
-epicsEnvSet("EPICS_BASE","/usr/local/epics/base")
