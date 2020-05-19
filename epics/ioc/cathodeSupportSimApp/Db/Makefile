@@ -2,8 +2,9 @@ TOP=../..
 include $(TOP)/configure/CONFIG
 
 # Install databases, templates & substitutions like this
-DB += simservices.vdb
 DB += watchdog.vdb
+DB += simservices.vdb
+DB += simservices_acr.vdb
 DB += profile.template
 DB += motor.substitutions
 DB_INSTALLS += $(ADSIM)/db/simDetector.template

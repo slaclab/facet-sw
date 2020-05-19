@@ -144,7 +144,7 @@ classdef F2_CathodeServicesApp < handle
 %         PV('Name',"gun_vacuum",'pvname',"VGCC:IN10:W285:P",'monitor',true,'guihan',[guihan.EditField_2,guihan.GunVacuumGauge]);
         PV('name',"gun_vacuum",'pvname',"VGCC:IN10:113:P",'monitor',true,'guihan',[guihan.EditField_2,guihan.GunVacuumGauge]); % Vacuum pressire for gun [nTorr]
         PV('name',"laser_telescope",'pvname',"LASR:LT10:100:TELE",'monitor',true,'guihan',guihan.SmallSpotEnabledLamp);
-        PV('name',"laser_reprate",'pvname',"LASR:LT10:REPRATE",'monitor',true,'guihan',guihan.EditField_13);
+        PV('name',"laser_reprate",'pvname',"CAMR:LT10:900:ArrayRate_RBV",'monitor',true,'guihan',guihan.EditField_13);
         PV('name',"watchdog_gunvaclimitHI",'pvname',"IN10_CATHODESUPPORT:gunVacHi"); % PV used by EPICS watchdog for high gun vacuum limit
         PV('name',"watchdog_laserlimitHI",'pvname',"IN10_CATHODESUPPORT:laserHi")]; % PV used by EPICS watchdog for high laser energy limit
       obj.gui = guihan ;
