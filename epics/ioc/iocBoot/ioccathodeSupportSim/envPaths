@@ -1,2 +1,0 @@
-epicsEnvSet("IOC","ioccathodeSupportSim")
-epicsEnvSet("TOP","/usr/local/epics/ioc")
