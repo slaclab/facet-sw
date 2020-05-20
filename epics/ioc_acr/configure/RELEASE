@@ -24,18 +24,8 @@
 
 # Variables and paths to dependent modules:
 MODULES = ${EPICS_MODULES_TOP}
-ADCORE = $(MODULES)/areaDetector/ADCore
-ADPRO = $(MODULES)/areaDetector/ADProsilica
-ASYN = $(MODULES)/asyn4-38
-ADSUPPORT = $(MODULES)/areaDetector/ADSupport
-ADSIM = $(MODULES)/areaDetector/ADSimDetector
-NDSTD = $(MODULES)/areaDetector/NDDriverStdArrays
-BUSY = $(MODULES)/busy-1-6-1
-MOTOR = $(MODULES)/motor-master
-# If using the sequencer, point SNCSEQ at its top directory:
-#SNCSEQ = $(MODULES)/seq-ver
-IOCADMIN = $(MODULES)/iocAdmin-3-1-15
-CALC = $(MODULES)/calc-R3-6-1
+#IOCADMIN = $(MODULES)/iocAdmin-3-1-15
+IOCADMIN = $(MODULES)/iocAdmin/iocAdmin-R3-3-1-2
 
 # EPICS_BASE should appear last so earlier modules can override stuff:
 EPICS_BASE = ${EPICS_BASE_TOP}
