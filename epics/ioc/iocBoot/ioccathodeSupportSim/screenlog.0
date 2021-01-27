@@ -1,0 +1,141 @@
+#!../../bin/linux-x86_64/cathodeSupportSim
+## You may have to change cathodeSupportSim to something else
+## everywhere it appears in this file
+< envPaths
+epicsEnvSet("IOC","ioccathodeSupportSim")
+epicsEnvSet("TOP","/home/fphysics/whitegr/facet-sw/epics/ioc")
+cd "/home/fphysics/whitegr/facet-sw/epics/ioc"
+epicsEnvSet("EPICS_CA_MAX_ARRAY_BYTES", "10000000")
+## Register all support components
+dbLoadDatabase "dbd/cathodeSupportSim.dbd"
+cathodeSupportSim_registerRecordDeviceDriver pdbbase
+## Hand generated DB records for vacuum systems, watchdog etc
+dbLoadRecords "db/simservices_acr.vdb"
+dbLoadRecords "db/watchdog.vdb", "user=IN10_CATHODESUPPORT"
+## iocAdmin
+epicsEnvSet("ENGINEER","Glen White")
+epicsEnvSet("LOCATION","FACET IN10 CATHODE")
+dbLoadRecords("db/iocAdminSoft.db","IOC=IN10_CATHODESUPPORT")
+## Set this to see messages from mySub
+#var mySubDebug 1
+## Run this to trace the stages of iocInit
+#traceIocInit
+cd "/home/fphysics/whitegr/facet-sw/epics/ioc/iocBoot/ioccathodeSupportSim"
+iocInit
+Starting iocInit
+############################################################################
+## EPICS R3.15.7
+## EPICS Base built May 20 2020
+############################################################################
+Illegal field value PV: IN10_CATHODESUPPORT:TIMEZONE devStringinEpics (init_record) INP field is not an EPICS env var
+
+Warning: Duplicate EPICS CA Address list entry "172.27.75.255:5069" discarded
+iocRun: All initialization complete
+## Start any sequence programs
+#seq sncExample, "user=whitegr"
+epics> #!../../bin/linux-x86_64/cathodeSupportSim
+## You may have to change cathodeSupportSim to something else
+## everywhere it appears in this file
+< envPaths
+epicsEnvSet("IOC","ioccathodeSupportSim")
+epicsEnvSet("TOP","/home/fphysics/whitegr/facet-sw/epics/ioc")
+cd "/home/fphysics/whitegr/facet-sw/epics/ioc"
+epicsEnvSet("EPICS_CA_MAX_ARRAY_BYTES", "10000000")
+## Register all support components
+dbLoadDatabase "dbd/cathodeSupportSim.dbd"
+cathodeSupportSim_registerRecordDeviceDriver pdbbase
+## Hand generated DB records for vacuum systems, watchdog etc
+dbLoadRecords "db/simservices_acr.vdb"
+dbLoadRecords "db/watchdog.vdb", "user=IN10_CATHODESUPPORT"
+## iocAdmin
+epicsEnvSet("ENGINEER","Glen White")
+epicsEnvSet("LOCATION","FACET IN10 CATHODE")
+dbLoadRecords("db/iocAdminSoft.db","IOC=IN10_CATHODESUPPORT")
+## Set this to see messages from mySub
+#var mySubDebug 1
+## Run this to trace the stages of iocInit
+#traceIocInit
+cd "/home/fphysics/whitegr/facet-sw/epics/ioc/iocBoot/ioccathodeSupportSim"
+iocInit
+Starting iocInit
+############################################################################
+## EPICS R3.15.7
+## EPICS Base built May 20 2020
+############################################################################
+Illegal field value PV: IN10_CATHODESUPPORT:TIMEZONE devStringinEpics (init_record) INP field is not an EPICS env var
+
+Warning: Duplicate EPICS CA Address list entry "172.27.75.255:5069" discarded
+iocRun: All initialization complete
+## Start any sequence programs
+#seq sncExample, "user=whitegr"
+epics> #!../../bin/linux-x86_64/cathodeSupportSim
+## You may have to change cathodeSupportSim to something else
+## everywhere it appears in this file
+< envPaths
+epicsEnvSet("IOC","ioccathodeSupportSim")
+epicsEnvSet("TOP","/home/fphysics/whitegr/facet-sw/epics/ioc")
+cd "/home/fphysics/whitegr/facet-sw/epics/ioc"
+epicsEnvSet("EPICS_CA_MAX_ARRAY_BYTES", "10000000")
+## Register all support components
+dbLoadDatabase "dbd/cathodeSupportSim.dbd"
+cathodeSupportSim_registerRecordDeviceDriver pdbbase
+## Hand generated DB records for vacuum systems, watchdog etc
+dbLoadRecords "db/simservices_acr.vdb"
+dbLoadRecords "db/watchdog.vdb", "user=IN10_CATHODESUPPORT"
+## iocAdmin
+epicsEnvSet("ENGINEER","Glen White")
+epicsEnvSet("LOCATION","FACET IN10 CATHODE")
+dbLoadRecords("db/iocAdminSoft.db","IOC=IN10_CATHODESUPPORT")
+## Set this to see messages from mySub
+#var mySubDebug 1
+## Run this to trace the stages of iocInit
+#traceIocInit
+cd "/home/fphysics/whitegr/facet-sw/epics/ioc/iocBoot/ioccathodeSupportSim"
+iocInit
+Starting iocInit
+############################################################################
+## EPICS R3.15.7
+## EPICS Base built May 20 2020
+############################################################################
+Illegal field value PV: IN10_CATHODESUPPORT:TIMEZONE devStringinEpics (init_record) INP field is not an EPICS env var
+
+Warning: Duplicate EPICS CA Address list entry "172.27.75.255:5069" discarded
+iocRun: All initialization complete
+## Start any sequence programs
+#seq sncExample, "user=whitegr"
+epics> #!../../bin/linux-x86_64/cathodeSupportSim
+## You may have to change cathodeSupportSim to something else
+## everywhere it appears in this file
+< envPaths
+epicsEnvSet("IOC","ioccathodeSupportSim")
+epicsEnvSet("TOP","/home/fphysics/whitegr/facet-sw/epics/ioc")
+cd "/home/fphysics/whitegr/facet-sw/epics/ioc"
+epicsEnvSet("EPICS_CA_MAX_ARRAY_BYTES", "10000000")
+## Register all support components
+dbLoadDatabase "dbd/cathodeSupportSim.dbd"
+cathodeSupportSim_registerRecordDeviceDriver pdbbase
+## Hand generated DB records for vacuum systems, watchdog etc
+dbLoadRecords "db/simservices_acr.vdb"
+dbLoadRecords "db/watchdog.vdb", "user=IN10_CATHODESUPPORT"
+## iocAdmin
+epicsEnvSet("ENGINEER","Glen White")
+epicsEnvSet("LOCATION","FACET IN10 CATHODE")
+dbLoadRecords("db/iocAdminSoft.db","IOC=IN10_CATHODESUPPORT")
+## Set this to see messages from mySub
+#var mySubDebug 1
+## Run this to trace the stages of iocInit
+#traceIocInit
+cd "/home/fphysics/whitegr/facet-sw/epics/ioc/iocBoot/ioccathodeSupportSim"
+iocInit
+Starting iocInit
+############################################################################
+## EPICS R3.15.7
+## EPICS Base built May 20 2020
+############################################################################
+Illegal field value PV: IN10_CATHODESUPPORT:TIMEZONE devStringinEpics (init_record) INP field is not an EPICS env var
+
+Warning: Duplicate EPICS CA Address list entry "172.27.75.255:5069" discarded
+iocRun: All initialization complete
+## Start any sequence programs
+#seq sncExample, "user=whitegr"
+epics> 

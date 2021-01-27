@@ -1,0 +1,5 @@
+
+function launchnotify(appname)
+
+[~,psid] = system(sprintf('./notify.sh "Launching Matlab GUI: %s..."',appname)) ;
+disp(psid
